@@ -4,11 +4,7 @@ function  countPair(gloves){
     const counter = {}
     let memo = 0;
     for (let key in gloves){
-        if (counter[gloves[key]]){
-            counter[gloves[key]]++;
-        }else {
-            counter[gloves[key]] = 1;
-        }
+        counter[gloves[key]] = (counter[gloves[key]] || 0) + 1;
     }
     const notRepeatArr = [...new Set(gloves)];
 
@@ -18,4 +14,4 @@ function  countPair(gloves){
     return memo;
 }
 
-console.log(countPair(['red','red','blue','blue']));
+console.log(countPair(['red','red','blue','blue', 'red', 'red']));
