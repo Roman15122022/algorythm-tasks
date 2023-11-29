@@ -1,5 +1,5 @@
 
-function flatten(arr){
+function flatten(arr){ //O(n)
     let finallyArr = [];
     for(let i = 0; i < arr.length; i++){
         if (Array.isArray(arr[i])){

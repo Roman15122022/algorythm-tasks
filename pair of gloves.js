@@ -1,6 +1,6 @@
 /*Count the number of pairs of gloves in the array (pairs are counted only of the same color)*/
 
-function  countPair(gloves){
+function  countPair(gloves){ //O(n)
     const counter = {}
     let memo = 0;
     for (let key in gloves){
