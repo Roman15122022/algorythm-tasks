@@ -1,7 +1,7 @@
 function explode(s) { //O(n^2)
     let newStr = "";
     for (let i = 0; i < s.length; i++) {
-        for (let num = s[i]; num > 0; num--) {
+        for (let j = 0; j < +s[i]; j++) {
             newStr += s[i]
         }
     }
