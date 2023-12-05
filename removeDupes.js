@@ -1,4 +1,4 @@
-function removeDupes(str) {  // O(n^2) - квадратичная сложность
+function removeDupes(str) {  // O(n^2)
     let arr = str.split('');
     let uniqueArr = [];
 
