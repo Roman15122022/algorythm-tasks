@@ -1,4 +1,4 @@
-let a = 'sda';
+/*let a = 'sda';
 let b = a.length;
 let c = a.replace('s', 'b');
 console.log(c)
@@ -11,4 +11,35 @@ console.log(arr)
 
 
 let strArr = arr.toString().split(',').map(Number)
-console.log(strArr)
+console.log(strArr)*/
+
+console.log(1)
+const a = new Promise((resolve,reject) => resolve(console.log(2)));
+a.then(res => console.log(3));
+
+setTimeout(()=>{
+    console.log(4);
+})
+a.then(res => console.log(5));
+console.log(6);
+
+const btn = document.getElementById('submit');
+
+function submitForm(event){
+    event.preventDefault();
+    const form = document.getElementById('myform');
+    const formData = new FormData(form);
+
+    fetch('http://localhost:63342/algorythm-tasks/test.html?_ijt=hhckqpectis1b5cjtr3cnfej2v',{
+        method: 'POST',
+        body: formData,
+    }).then(response => response.json())
+        .then(data => {
+            console.log('Successful:', data);
+        })
+        .catch(error => {
+            console.log('Error:', error)
+        })
+}
+
+btn.addEventListener('click', submitForm);
