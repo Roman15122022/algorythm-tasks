@@ -23,7 +23,7 @@ setTimeout(()=>{
 a.then(res => console.log(5));
 console.log(6);
 
-const btn = document.getElementById('submit');
+/*const btn = document.getElementById('submit');
 
 function submitForm(event){
     event.preventDefault();
@@ -42,4 +42,23 @@ function submitForm(event){
         })
 }
 
-btn.addEventListener('click', submitForm);
+btn.addEventListener('click', submitForm);*/
+
+String.prototype.hello = function() {
+    console.log(this + ' HELLO');
+};
+
+let fgr = 'Roma';
+fgr.hello(); // Output: Roma HELLO
+
+Array.prototype.output = function (){
+    this.forEach(item => console.log(item));
+}
+
+let array = [1,2,3,4,5];
+array.output()
+
+Object.prototype;
+Symbol.prototype;
+Number.prototype;
+Boolean.prototype;
