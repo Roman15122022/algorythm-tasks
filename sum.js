@@ -8,3 +8,8 @@ function calculate(...args) {
 }
 
 console.log(calculate(2, 2)(1, 2, 4));
+
+
+
+let a = (5,4 - 1)*2;
+console.log(a)
