@@ -8,3 +8,19 @@ const obj = {
 }
 
 obj.say();
+
+let name = 'apple';
+
+function sayHi(){
+    console.log(name);
+}
+
+setTimeout((function (){
+    let name = 'orange';
+    sayHi();
+}))
+
+
+let foo = function bar() { };
+console.log(typeof foo)
+
