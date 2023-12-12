@@ -9,3 +9,4 @@ const filter = function(arr, fn) {
 };
 
 console.log(filter([1,2,6,7,8,], (x) => x>5))
+

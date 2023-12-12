@@ -13,5 +13,10 @@ const checkOnPolydrome = (str) =>{  //O(n/2) == O(n);
     return true;
 }
 
-console.log(checkOnPolydrome(str2))
+const polyndrome = (str) =>{
+    let string = str.toLowerCase();
+    return (string === string.split('').reverse().join(''));
+}
 
+console.log(checkOnPolydrome(str2))
+console.log(polyndrome(str2))
