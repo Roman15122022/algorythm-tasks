@@ -35,15 +35,15 @@ function binarySearch(arr, num) { //O(log n)
         }
 
         if (arr[middle] > num){
-            right = middle + 1;
+            right = middle - 1;
         }
         else {
-            left = middle - 1;
+            left = middle + 1;
         }
     }
 }
 
-console.log(binarySearch(numbers, 79))
+console.log(binarySearch(numbers,88))
 
 const end2 = new Date().getTime();
 

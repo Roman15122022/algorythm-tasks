@@ -8,8 +8,8 @@ function explode(s) { //O(n^2)
     return newStr
 }
 
-function explode2(s) { //O(n)
-    return s.split("").map((e) => e.repeat(+e)).join("");
+function explode2(str) { //O(n)
+    return str.split("").map((elem) => elem.repeat(+elem)).join("");
 }
 
 console.log(explode('235'))
