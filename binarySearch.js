@@ -19,7 +19,7 @@ console.log(search(numbers, 79));
 
 const end = new Date().getTime();
 
-console.log(end - start + 'ms')
+console.log(end - start + 'ms', 'simple')
 
 const start2 = new Date().getTime();
 
@@ -47,5 +47,5 @@ console.log(binarySearch(numbers,88))
 
 const end2 = new Date().getTime();
 
-console.log(end2 - start2 + 'ms')
+console.log(end2 - start2 + 'ms', 'Binary')
 

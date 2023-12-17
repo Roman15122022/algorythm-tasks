@@ -5,4 +5,5 @@ const anagram = (str1, str2) => {
 }
 
 console.log(anagram('finder', 'Friend'));
+console.log(anagram('finder', 'Fr2iend'));
 

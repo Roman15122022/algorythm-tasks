@@ -3,8 +3,7 @@ function flatten(arr){ //O(n)
     let finallyArr = [];
     for(let i = 0; i < arr.length; i++){
         if (Array.isArray(arr[i])){
-            const flattenArr = flatten(arr[i]);
-            finallyArr.push(...flattenArr);
+            finallyArr.push(...flatten(arr[i]));
         }else {
             finallyArr.push(arr[i]);
         }
@@ -13,6 +12,6 @@ function flatten(arr){ //O(n)
 }
 
 console.log(flatten([1,2,3,[1,4],[[1,2,3]]]))
-console.log([1,2,3,[1,4],[[1,2,3]]].flat(Infinity))
+/*console.log([1,2,3,[1,4],[[1,2,3]]].flat(Infinity))
 
-console.log([1,2,3,[1,4],[[1,2,3]]].toString().split(',').map(Number))
+console.log([1,2,3,[1,4],[[1,2,3]]].toString().split(',').map(Number))*/
