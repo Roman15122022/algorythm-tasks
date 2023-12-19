@@ -11,7 +11,7 @@ For example, a tower with 3 floors looks like this:
 */
 
 function tower(number) {
-    let star = '*'
+    let star = '*';
     const arr = ['*'];
         for (let i = 1; i < number; i++) {
             let row = star.repeat(i + 2);
@@ -21,3 +21,5 @@ function tower(number) {
 }
 
 console.log(tower(8));
+
+
