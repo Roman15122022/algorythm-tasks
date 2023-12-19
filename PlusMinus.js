@@ -1,4 +1,3 @@
-/*
 
 // 2.plus(3).minus.(1) = 4;
 
@@ -9,8 +8,7 @@ Number.prototype.minus = function (num) {
     return this - num;
 }
 
-console.log((2).plus(3).minus(1));
-*/
+console.log((2).plus(3).minus(10));
 
 
-console.log(null == 0)
+console.log(undefined == 0)
