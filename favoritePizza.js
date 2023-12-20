@@ -33,7 +33,6 @@ const favoritePizza3 = (arr) => {
 };
 
 
-
 console.log(favoritePizza(friends));
 console.log(favoritePizza2(friends));
 console.log(favoritePizza3(friends));
