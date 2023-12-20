@@ -25,7 +25,16 @@ const favoritePizza2 = (arr) => { //O(n*m)
     return [... new Set(answer)];
 }
 
+const favoritePizza3 = (arr) => {
+    const pizzas = arr.reduce((memo, item) => {
+        return [...memo, ...item.pizzas];
+    },[])
+    return [...new Set(pizzas)]
+};
+
 
 console.log(favoritePizza(friends));
 console.log(favoritePizza2(friends));
+console.log(favoritePizza3(friends));
+
 
