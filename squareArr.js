@@ -6,3 +6,4 @@ function squareArr(arr){
 }
 
 console.log(squareArr([2,5,7,9,0,-5]))
+

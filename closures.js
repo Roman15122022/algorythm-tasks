@@ -20,20 +20,35 @@ setTimeout((function (){
     sayHi();
 }))
 
-
-let foo = function bar() { };
-console.log(typeof foo)
-
-var f = function() {
-    console.log(1);
+/*
+for (var i = 0; i < 10; i++) {
+    setTimeout(() =>{
+        console.log(i);
+    },1000)
+}*/
+// |
+// v
+// first
+for (let i = 0; i < 10; i++) {
+    setTimeout(() =>{
+        console.log(i);
+    },1000)
 }
 
-var execute = function(f) {
-    setTimeout(f, 1000);
+// second
+for (var i = 0; i < 10; i++) {
+    (function (j) {
+        setTimeout(() =>{
+            console.log(j);
+        },1000)
+    })(i)
 }
 
-execute(f); // что выведет в консоль и почему
+//third
 
-f = function() {
-    console.log(2);
+for (var i = 0; i < 10; i++) {
+    setTimeout((i) =>{
+        console.log(i);
+    },1000, i)
 }
+
