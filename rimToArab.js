@@ -18,7 +18,6 @@ function romanToArabic2(roman) {
         V: 5,
         X: 10,
         L: 50,
-
     };
 
     let result = 0;

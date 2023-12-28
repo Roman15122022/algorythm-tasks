@@ -9,3 +9,4 @@ const isEqual = (arr, arr2) => {
 }
 
 console.log(isEqual([1, 2, 3, 4], [1, 2, 3, 4]))
+
