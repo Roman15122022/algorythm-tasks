@@ -21,7 +21,6 @@ function romanToArabic2(roman) {
     };
 
     let result = 0;
-
     for (let i = 0; i < roman.length; i++) {
         const currentSymbol = roman[i];
         const currentValue = romanNumerals[currentSymbol];
