@@ -8,7 +8,7 @@ function sringNumber(str){
         dictionary[str[i]] = (dictionary[str[i]] || 0) + 1;
     }
     let arr = [... new Set(str)];
-    return arr.map(item => item + dictionary[item]);
+    return arr.map(item => item + dictionary[item]).join('');
 }
 
 console.log(sringNumber('AAABBCCCCCHHH'));
