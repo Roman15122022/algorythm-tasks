@@ -8,16 +8,36 @@
     <link href="test.css" rel="stylesheet">
     <title>Document</title>
 </head>
-    <body>
-        <form class="form" id="myform" style="background-color: blue">
+    <body onclick="">
+       <!-- <form class="form" id="myform" style="background-color: blue">
             <label for="name">Name:</label>
             <input id="name" name="name" required type="text">
             <br>
             <label for="email">Email:</label>
             <input id="email" name="email" required type="email">
             <button id="submit">Submit</button>
-        </form>
-        <script src="test.js">
+        </form>-->
+       <div id="1">
+           <div id="2">
+               <div id="3">
+                   <div>Click</div>
+               </div>
+           </div>
+       </div>
+        <script>
+            const one = document.getElementById('1')
+            const two = document.getElementById('2')
+            const three = document.getElementById('3')
+
+            one.addEventListener('click', () =>{
+                alert('1')
+            }, true)
+            two.addEventListener('click', () =>{
+                alert('2')
+            }, true)
+            three.addEventListener('click', () =>{
+                alert('3')
+            }, true)
         </script>
     </body>
 </html>
