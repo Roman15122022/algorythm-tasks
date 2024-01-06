@@ -16,4 +16,4 @@ const persistent = (num) => {
     return persistent(multiply);
 }
 
-console.log(persistent(39))
+console.log(persistent(999))
