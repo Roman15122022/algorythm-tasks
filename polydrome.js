@@ -13,6 +13,18 @@ const checkOnPolydrome = (str) => {  //O(n/2) == O(n);
     return true;
 }
 
+const polyndromeTwoIndex = (str) => {
+    let start = 0
+    let end = str.length - 1;
+
+    while (end >= start){
+        if (str[start] !== str[end]) return false;
+        start++;
+        end--;
+    }
+    return true
+}
+
 const polyndrome = (str) => {
     let string = str.toLowerCase();
     return (string === string.split('').reverse().join(''));
@@ -26,6 +38,8 @@ const polyndrome2 = (str) => {
     return string === str;
 }
 
+
 console.log(checkOnPolydrome(str2))
 console.log(polyndrome(str2))
 console.log(polyndrome2(str2))
+console.log(polyndromeTwoIndex(str2))
