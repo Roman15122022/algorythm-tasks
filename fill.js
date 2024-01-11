@@ -8,4 +8,11 @@ const fill = (num, value) => {
     return arr;
 }
 
-console.log(fill(5, 'b'))
+const fill2 = (value, count) => {
+    let arr = [];
+    arr.length = count;
+    return arr.fill(value);
+}
+
+console.log(fill(5, 'b'));
+console.log(fill2('b', 5))
