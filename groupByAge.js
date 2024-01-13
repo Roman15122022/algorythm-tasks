@@ -13,7 +13,7 @@ const students = [
 ]
 
 const groupByAge = (arr) => {
-    return arr.reduce((memo, item) =>{
+    return arr.reduce((memo, item) => {
         const age = item.age;
         if (!memo[age]) memo[age] = [];
         memo[age].push(item);
@@ -21,4 +21,16 @@ const groupByAge = (arr) => {
     }, {})
 }
 
+const countStudentByAge = (arr) => {
+    return arr.reduce((memo, item) => {
+        const age = item.age;
+        /*memo[age] = (memo[age] || 0) + 1;*/
+        if (!memo[age]) {
+            memo[age] = 1;
+        } else memo[age]++;
+        return memo;
+    }, {})
+}
+
 console.log(groupByAge(students));
+console.log(countStudentByAge(students))
