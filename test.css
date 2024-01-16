@@ -15,3 +15,21 @@
 /**{
     background-color: black!important;
 }*/
+
+p {
+    position: absolute;
+    animation-duration: 0.75s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0.3;
+        bottom: 5px;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 40px;
+    }
+}
