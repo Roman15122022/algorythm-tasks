@@ -21,18 +21,21 @@
 const prefixMax = (arr) => {
     let answer = '';
     let counter = 0;
-    while (counter <= arr[0].length) {
-        let temp = arr[0][counter] || '';
-        let flag = false;
-        for (let i = 0; i < arr.length; i++) {
-            flag = temp === arr[i][counter];
+
+    while (counter < arr[0].length) {
+        let temp = arr[0][counter];
+
+        for (let i = 1; i < arr.length; i++) {
+            if (temp !== arr[i][counter]) {
+                return answer;
+            }
         }
-        if (flag) {
-            answer += temp;
-        } else return answer
+
+        answer += temp;
         counter++;
     }
+
     return answer;
 }
 
-console.log(prefixMax(['o323', 'o323', 'o323'])) /// fl
+console.log(prefixMax(['o323432423', 'o32343434', 'o323432432'])) /// fl
