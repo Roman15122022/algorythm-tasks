@@ -10,16 +10,7 @@ const sortByPopularity = (arr) => {
     arr.forEach((item) => {
         dictionary[item] = (dictionary[item] || 0) + 1;
     })
-    const array = Object.keys(dictionary);
-    return array.sort((a, b) =>{
-        if (dictionary[a] > dictionary[b]){
-            return -1;
-        }
-        if (dictionary[a] < dictionary[b]){
-            return 1;
-        }
-        return 0;
-    })
+    return  Object.keys(dictionary).sort((a, b) => dictionary[b] - dictionary[a]);
 }
 
 console.log(sortByPopularity(classNames))
