@@ -9,7 +9,7 @@ const lastWordLength = (string) => {
             if (string[i-1] === ' ') return count
         }
     }
-    return flag
+    return 0;
 }
 
 console.log(lastWordLength(string), 'ad')
