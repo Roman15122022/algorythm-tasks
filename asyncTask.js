@@ -28,6 +28,6 @@ async function asyncTask(str, num) {
 }
 
 asyncTask('apple, elephant, three, forest' , 13).then((data) => {
-    console.log(data)
+    console.log(data.join(' '))
 })
 
