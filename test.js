@@ -65,5 +65,4 @@ Boolean.prototype;
 
 
 
-
 console.log(new Array(3) == ',,')
