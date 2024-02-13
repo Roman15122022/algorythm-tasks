@@ -1,5 +1,5 @@
 const numbers = [15, 21, 30, 45, 17, 22, 36, 41, 57];
-const divisor = 6;
+const divisor = 7;
 
 
 const groupByRemainder = (numbers, divisor) => {
