@@ -8,5 +8,11 @@ const  reverse = (arr) => {
     return answer;
 }
 
+const reverse2 = (arr) => {
+    return arr.reverse();
+}
+
 
 console.log(reverse([1,2,3]))
+console.log(reverse2([1,2,3]))
+
