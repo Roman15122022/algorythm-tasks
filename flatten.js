@@ -12,6 +12,6 @@ function flatten(arr){ //O(n*d)
 }
 
 console.log(flatten([1,2,3,[1,4],[[1,2,3]]]))
-/*console.log([1,2,3,[1,4],[[1,2,3]]].flat(Infinity))
+console.log([1,2,3,[1,4],[[1,2,3]]].flat(Infinity))
 
-console.log([1,2,3,[1,4],[[1,2,3]]].toString().split(',').map(Number))*/
+console.log([1,2,3,[1,4],[[1,2,3]]].toString().split(',').map(Number))
