@@ -8,27 +8,6 @@ const maze = [
 ]
 
 console.log(maze);
-/*
-const checkPath = (start, end) => {
-    let {x: startX, y: startY} = start;
-    const {x: endX, y: endY} = end;
-    if (maze[endY][endX] !== 0) return false;
-    let count = 0;
-    while (count < maze.length) {
-        for (let i = 0; i < maze[startY].length - 1; i++) {
-            if (maze[startY+1][i] === 0 && maze[startY][i] === 0){
-                startX = i;
-                startY++;
-            };
-        }
-        count++;
-    }
-    console.log(startX,startY)
-    return startX === endX && startY === endY;
-}
-
-console.log(checkPath({x: 3, y: 0}, {x: 5, y: 5}))*/
-
 
 const solution = (start, end) => {
     maze[start.y][start.x] = 5;
