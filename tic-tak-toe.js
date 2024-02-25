@@ -34,4 +34,4 @@ const checkResult = (arr) => {
     return 0;
 }
 
-console.log(checkResult(board));
+console.log(checkResult(board2));
