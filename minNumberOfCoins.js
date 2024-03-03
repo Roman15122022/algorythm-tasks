@@ -21,4 +21,4 @@ const minNumberOfCoins = (arr, num) => { //O(n^2)
 }
 
 
-console.log(minNumberOfCoins([1,5,10,25],68))
+console.log(minNumberOfCoins([1,5,10,15],68))
