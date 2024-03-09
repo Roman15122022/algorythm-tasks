@@ -5,7 +5,6 @@ const orders = [
     { id: 4, product: 'T-shirt', price: 30, quantity: 1 },
     { id: 5, product: 'Jeans', price: 55, quantity: 2 },
 ];
-
 const calculateTotal = (orders) => {
     return orders.reduce((memo, item) => {
         const product = item.product;
