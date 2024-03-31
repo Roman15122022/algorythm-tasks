@@ -15,5 +15,4 @@ const calculateTotal = (orders) => {
         return memo;
     }, {})
 }
-
 console.log(calculateTotal(orders))
