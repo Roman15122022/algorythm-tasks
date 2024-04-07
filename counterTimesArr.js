@@ -8,4 +8,4 @@ const counterTimesArr = (arr) => {
     },{})
 }
 
-console.log(counterTimesArr(['orange', "orange", "orange", 'kiwi', "kiwi", "kiwi", "kiwi", "kiwi", "kiwi", "kiwi", "orange"]));
+console.log(counterTimesArr([ "orange", "orange", 'kiwi', "kiwi", "kiwi", "kiwi", "kiwi", "kiwi", "kiwi", "orange"]));
