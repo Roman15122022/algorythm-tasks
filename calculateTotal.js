@@ -16,3 +16,4 @@ const calculateTotal = (orders) => {
     }, {})
 }
 console.log(calculateTotal(orders))
+
