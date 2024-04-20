@@ -3,7 +3,7 @@
 let str = 'deed';
 let str2 = 'uаasddsaаu'
 
-const checkOnPolydrome = (str) => {  //O(n/2) == O(n);
+const checkOnPolydrome = (str) => {
     str = str.toLowerCase();
     for (let i = 0; i < str.length / 2; i++) {
         if (str[i] !== str[--str.length - i]) {
@@ -12,6 +12,7 @@ const checkOnPolydrome = (str) => {  //O(n/2) == O(n);
     }
     return true;
 }
+
 
 const polyndromeTwoIndex = (str) => {
     let start = 0
@@ -26,8 +27,7 @@ const polyndromeTwoIndex = (str) => {
 }
 
 const polyndrome = (str) => {
-    let string = str.toLowerCase();
-    return (string === string.split('').reverse().join(''));
+    return (str.toLowerCase() === str.split('').reverse().join(''));
 }
 
 const polyndrome2 = (str) => {
