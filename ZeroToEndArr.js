@@ -14,3 +14,8 @@ const zeroToEndArr = (arr) => {
 }
 
 console.log(zeroToEndArr([1,0,2,0,3,0,4,0]))
+
+
+let a = 6
+let a = 50
+console.log(a)
