@@ -34,3 +34,4 @@ const countStudentByAge = (arr) => {
 
 console.log(groupByAge(students));
 console.log(countStudentByAge(students))
+console.log(Object.entries(students[1]))
