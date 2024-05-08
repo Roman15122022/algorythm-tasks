@@ -22,3 +22,7 @@ const fizzBuzz = (num) =>{
 }
 
 fizzBuzz(15);
+
+let a = 1
+let b = a.toString()
+console.log(typeof b)
