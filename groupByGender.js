@@ -26,4 +26,17 @@ const groupByGender = (arr) => {
     }, {})
 }
 
+const groupByGender2 = (arr) => {
+    return arr.reduce((acc, item) => {
+        if (!acc[item.gender]) {
+            acc[item.gender] = [];
+        }
+        acc[item.gender].push(item);
+        return acc;
+    }, {});
+}
+
 console.log(groupByGender(students))
+console.log(groupByGender2(students))
+
+console.log('a'.toUpperCase())
