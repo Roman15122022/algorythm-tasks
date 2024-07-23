@@ -1,17 +1,17 @@
-function* FuncGenerator () {
-    yield 1
-    yield 2
-    return 3
+function* gen() {
+    let ask1 = yield;
+
+    console.log(ask1); // 4
+
+    let ask2 = yield
+
+    console.log(ask2); // 9
 }
 
-const generator = FuncGenerator()
+let generator = gen();
 
+console.log( generator.next().value ); // "2 + 2 = ?"
 
-const one = generator.next()
+console.log( generator.next(4).value ); // "3 * 3 = ?"
 
-const two = generator.next()
-const {value: three} = generator.next()
-
-console.log(one)
-console.log(two)
-console.log(three)
+console.log( generator.next(9).done ); // true
