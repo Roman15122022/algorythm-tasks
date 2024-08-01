@@ -22,4 +22,4 @@ const chunk = (arr, num) => {
 
 }
 
-console.log(chunk(arr,4));
+console.log(chunk(arr,2));
