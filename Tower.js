@@ -7,16 +7,19 @@ For example, a tower with 3 floors looks like this:
   "  *  ",
   " *** ",
   "*****"
+
 ]
 */
 
 function tower(number) {
     let star = '*';
-    const arr = ['*'];
-        for (let i = 1; i < number; i++) {
-            let row = star.repeat(i + 2);
-            arr.push(row);
-        }
+    let space = ' ';
+    const arr = [];
+    for (let i = 1; i < number; i++) {
+        const spaces = (number - i) / 2
+        let row = space.repeat(spaces - 1) + star.repeat(i) + space.repeat(spaces - 1)
+        arr.push(row)
+    }
     return arr;
 }
 

@@ -6,3 +6,4 @@
 function splitString (str) {
 
 }
+
