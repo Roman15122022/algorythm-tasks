@@ -14,4 +14,10 @@ function reverseObjectEntries (arr) {
     }, {})
 }
 
+function reverseObjectEntries2 (arr) {
+    return Object.fromEntries(arr)
+}
+
 console.log(reverseObjectEntries(pairs))
+console.log(reverseObjectEntries2(pairs))
+

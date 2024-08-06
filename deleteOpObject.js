@@ -27,5 +27,16 @@ function deleteOptions2(obj, arr) {
     }, {});
 }
 
+function deleteOptions3(obj, arr) {
+    arr.forEach(item => {
+        delete obj[item];
+    });
+
+    return obj
+}
+
+console.log(structuredClone(obj))
+
 console.log(deleteOptions(obj, arrKeys))
 console.log(deleteOptions2(obj, arrKeys))
+console.log(deleteOptions3(obj, arrKeys))

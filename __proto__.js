@@ -12,3 +12,27 @@ console.log(nullObj.__proto__)
 
 console.log(obj1.__proto__ === Object.prototype)
 console.log(Object.prototype)
+
+
+Array.prototype.log = function () {
+    console.log(this)
+}
+
+String.prototype.reverseRomaVersion = function () {
+    return  this.split('').reverse()
+}
+
+Boolean.prototype.reverse = function () {
+    return !this
+}
+
+const arr = [1,23,3]
+const str = 'Roman'
+const bool = true
+
+arr.log()
+console.log(str.reverseRomaVersion())
+console.log(bool.reverse())
+
+
+console.log(Function.prototype)
