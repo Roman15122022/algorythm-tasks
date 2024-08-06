@@ -36,3 +36,6 @@ console.log(bool.reverse())
 
 
 console.log(Function.prototype)
+
+const a = {x : 1}
+console.log(a.__proto__.hasOwnProperty('__proto__'))

@@ -7,4 +7,7 @@ const reduce = function reduce(arr, reduceCallback, initialValue) {
     return value;
 }
 
-console.log(reduce([1,2,3], (memo, item)=> memo += item, 0))
+console.log(reduce([1,2,3], (memo, item)=>{
+    memo[item] = item
+    return memo
+}, {}))
