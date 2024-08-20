@@ -1,4 +1,4 @@
-var Roma = 'Roman Malyi'
+/*var Roma = 'Roman Malyi'
 
 console.log(window.Roma) // Roman Malyi
 
@@ -14,4 +14,33 @@ console.log(window.example())
 
 window.test = 'test' // var
 
-console.log(test)
+console.log(test)*/
+
+requestAnimationFrame(() => {
+    console.log('animation frame')
+})
+
+console.log('Start');
+
+setTimeout(() => {
+    console.log('Timeout');
+}, 0);
+
+setTimeout(() => {
+    console.log('Timeout2');
+}, 0);
+
+setTimeout(() => {
+    console.log('Timeout3');
+}, 1); // граница 223 когда таймер виполняеться после requestIdleCallback
+
+Promise.resolve().then(() => {
+    console.log('Promise');
+});
+
+requestIdleCallback(() => {
+    console.log('Idle Callback');
+});
+
+
+console.log('End');
