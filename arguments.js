@@ -9,3 +9,14 @@ function sum(){
 
 console.log(sum('b','a', 'nan', 'a'))
 
+
+const obj = {
+  count: 1,
+  date: 2
+}
+
+
+const obj2 = {
+  count: 33,
+  date: 11
+}
