@@ -1,6 +1,6 @@
 const nums = [2, 7, 11, 15]
 
-const target = 22
+const target = 9
 
 console.time('Start')
 function getSumIndex(nums, target) {
