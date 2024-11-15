@@ -13,9 +13,22 @@ const zeroToEndArr = (arr) => {
     return array;
 }
 
+const zeroToEndTwo = (arr) => {
+  const zeroArr = []
+  const result = []
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0){
+      zeroArr.push(arr[i])
+    }else {
+      result.push(arr[i])
+    }
+  }
+
+  return [...result, ...zeroArr]
+}
+
 console.log(zeroToEndArr([1,0,2,0,3,0,4,0]))
+console.log(zeroToEndTwo([1,0,2,0,3,0,4,0]))
 
 
-let a = 6
-let a = 50
-console.log(a)
