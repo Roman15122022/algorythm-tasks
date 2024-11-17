@@ -28,7 +28,20 @@ const zeroToEndTwo = (arr) => {
   return [...result, ...zeroArr]
 }
 
+const zeroToEndThree = (arr) => {
+  const zeroArr = []
+
+  return [...arr.filter((number) => {
+    if (number === 0){
+      zeroArr.push(number)
+      return  false
+    }
+    return true
+  }), ...zeroArr]
+}
+
 console.log(zeroToEndArr([1,0,2,0,3,0,4,0]))
 console.log(zeroToEndTwo([1,0,2,0,3,0,4,0]))
+console.log(zeroToEndThree([1,0,2,0,3,0,4,0]))
 
 
