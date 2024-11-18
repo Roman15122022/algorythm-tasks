@@ -23,4 +23,3 @@ console.log(6);
 setTimeout(() => console.log(7),0);*/
 
 //1 6 3 5 2 4 7
-
