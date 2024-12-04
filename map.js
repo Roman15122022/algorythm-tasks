@@ -23,3 +23,9 @@ console.log(6);
 setTimeout(() => console.log(7),0);*/
 
 //1 6 3 5 2 4 7
+
+const asd = eval(`(function (){
+  return 5
+})()`)
+
+console.log(asd)

@@ -6,7 +6,9 @@ const input = [
 ]
 
 function getInput  (arr) {
-  return arr.filter(item => item.expired).sort((a,b) => a.order - b.order).reduce((acc, item) => {
+  return arr.filter(item => item.expired)
+      .sort((a,b) => a.order - b.order)
+      .reduce((acc, item) => {
     acc += item.value.split('').reverse().join('')
 
     return acc
