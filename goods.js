@@ -12,6 +12,7 @@ const getRolesTable = (arr) => {
   return arr.reduce((acc, {id, type, weight}) => {
     acc[type] = acc[type] || {}
     acc[type].ids = acc[type].ids || []
+
     acc[type].ids.push(id)
     acc[type].totalWeight = (acc[type].totalWeight || 0) + +weight
 
