@@ -15,6 +15,7 @@ function groupByDepartment(arr){
 
     return acc
   }, {})
+
 }
 
 console.log(groupByDepartment(employees))
