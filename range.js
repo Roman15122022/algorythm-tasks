@@ -32,4 +32,5 @@ function range(arr) {
   })
 }
 
+
 console.log(range([1, 4, 5, 2, 3, 35, 9, 10, 8, 11, 0]))
