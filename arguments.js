@@ -20,3 +20,5 @@ const obj2 = {
   count: 33,
   date: 11
 }
+
+console.log('123')
