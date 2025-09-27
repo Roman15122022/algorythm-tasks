@@ -19,7 +19,7 @@ Array.prototype.log = function () {
 }
 
 String.prototype.reverseRomaVersion = function () {
-    return  this.split('').reverse()
+    return  this.split('').reverse().join('')
 }
 
 Boolean.prototype.reverse = function () {
