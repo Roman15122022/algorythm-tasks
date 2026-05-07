@@ -52,3 +52,11 @@ for (var i = 0; i < 10; i++) {
     },1000, i)
 }
 
+//fourth
+
+const removeDuolicates = (arr) => {
+    const seen = {};
+    return arr.filter((item) => {
+        return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+    });
+}
