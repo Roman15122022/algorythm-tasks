@@ -1,12 +1,10 @@
+function as() {
+  var b = 5;
 
+  o = 14;
 
-function as (){
-    var b = 5
-
-    o = 14
-
-    return b
+  return b;
 }
 
-as()
-console.log(global.o)
+as();
+console.log(global.o);

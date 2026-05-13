@@ -3,7 +3,4 @@
   'abcdef' => ['ab', 'cd', 'ef']
   */
 
-function splitString (str) {
-
-}
-
+function splitString(str) {}

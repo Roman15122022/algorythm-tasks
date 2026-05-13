@@ -13,14 +13,14 @@ console.log(arr)
 let strArr = arr.toString().split(',').map(Number)
 console.log(strArr)*/
 
-console.log(1)
-const a = new Promise((resolve,reject) => resolve(console.log(2)));
-a.then(res => console.log(3));
+console.log(1);
+const a = new Promise((resolve, reject) => resolve(console.log(2)));
+a.then((res) => console.log(3));
 
-setTimeout(()=>{
-    console.log(4);
-})
-a.then(res => console.log(5));
+setTimeout(() => {
+  console.log(4);
+});
+a.then((res) => console.log(5));
 console.log(6);
 
 /*const btn = document.getElementById('submit');
@@ -44,25 +44,23 @@ function submitForm(event){
 
 btn.addEventListener('click', submitForm);*/
 
-String.prototype.hello = function() {
-    console.log(this + ' HELLO');
+String.prototype.hello = function () {
+  console.log(this + ' HELLO');
 };
 
 let fgr = 'Roma';
 fgr.hello(); // Output: Roma HELLO
 
-Array.prototype.output = function (){
-    this.forEach(item => console.log(item));
-}
+Array.prototype.output = function () {
+  this.forEach((item) => console.log(item));
+};
 
-let array = [1,2,3,4,5];
-array.output()
+let array = [1, 2, 3, 4, 5];
+array.output();
 
 Object.prototype;
 Symbol.prototype;
 Number.prototype;
 Boolean.prototype;
 
-
-
-console.log(new Array(3) == ',,')
+console.log(new Array(3) == ',,');

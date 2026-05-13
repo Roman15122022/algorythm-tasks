@@ -4,16 +4,15 @@
 
 let counter = 0;
 const persistent = (num) => {
+  let arr = num.toString().split('');
+  if (arr.length === 1) {
+    return counter;
+  }
+  counter++;
+  let multiply = arr.reduce((memo, item) => {
+    return (memo *= Number(item));
+  }, 1);
+  return persistent(multiply);
+};
 
-    let arr = num.toString().split('');
-    if (arr.length === 1){
-        return counter;
-    }
-    counter++;
-    let multiply = arr.reduce((memo, item) => {
-       return  memo *= Number(item);
-    },1)
-    return persistent(multiply);
-}
-
-console.log(persistent(999))
+console.log(persistent(999));

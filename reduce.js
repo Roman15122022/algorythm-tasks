@@ -1,13 +1,19 @@
 const reduce = function reduce(arr, reduceCallback, initialValue) {
-    let value = initialValue;
-    for (let i = 0; i < arr.length; i++) {
-        value = reduceCallback(value, arr[i], i, arr);
-    }
+  let value = initialValue;
+  for (let i = 0; i < arr.length; i++) {
+    value = reduceCallback(value, arr[i], i, arr);
+  }
 
-    return value;
-}
+  return value;
+};
 
-console.log(reduce([1,2,3], (memo, item)=>{
-    memo[item] = item
-    return memo
-}, {}))
+console.log(
+  reduce(
+    [1, 2, 3],
+    (memo, item) => {
+      memo[item] = item;
+      return memo;
+    },
+    {}
+  )
+);

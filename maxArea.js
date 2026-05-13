@@ -18,24 +18,23 @@ Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,
 }*/
 
 function maxArea2(arr) {
-    let left = 0
-    let right = arr.length - 1;
-    let max = 0;
+  let left = 0;
+  let right = arr.length - 1;
+  let max = 0;
 
-    while (left < right) {
-        const leftValue = arr[left];
-        const rightValue = arr[right];
-        max = Math.max(max, Math.min(leftValue, rightValue) * (right - left));
+  while (left < right) {
+    const leftValue = arr[left];
+    const rightValue = arr[right];
+    max = Math.max(max, Math.min(leftValue, rightValue) * (right - left));
 
-        if (leftValue > rightValue) {
-            right--
-        } else {
-            left++;
-        }
+    if (leftValue > rightValue) {
+      right--;
+    } else {
+      left++;
     }
+  }
 
-    return max;
+  return max;
 }
 
-
-console.log(maxArea2([4, 3, 2, 1, 4]))
+console.log(maxArea2([4, 3, 2, 1, 4]));

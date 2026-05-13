@@ -17,30 +17,29 @@ window.test = 'test' // var
 console.log(test)*/
 
 requestAnimationFrame(() => {
-    console.log('animation frame')
-})
+  console.log('animation frame');
+});
 
 console.log('Start');
 
 setTimeout(() => {
-    console.log('Timeout');
+  console.log('Timeout');
 }, 0);
 
 setTimeout(() => {
-    console.log('Timeout2');
+  console.log('Timeout2');
 }, 0);
 
 setTimeout(() => {
-    console.log('Timeout3');
+  console.log('Timeout3');
 }, 1); // граница 223 когда таймер виполняеться после requestIdleCallback
 
 Promise.resolve().then(() => {
-    console.log('Promise');
+  console.log('Promise');
 });
 
 requestIdleCallback(() => {
-    console.log('Idle Callback');
+  console.log('Idle Callback');
 });
-
 
 console.log('End');

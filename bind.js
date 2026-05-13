@@ -1,11 +1,11 @@
 function bind(context, func) {
-    return function (...args) {
-        func.apply(context, args);
-    };
+  return function (...args) {
+    func.apply(context, args);
+  };
 }
 
 function logPerson() {
-    console.log(`Person: ${this.name}, ${this.age}, ${this.job}`);
+  console.log(`Person: ${this.name}, ${this.age}, ${this.job}`);
 }
 
 const person1 = { name: 'Roman', age: 19, job: 'Frontend' };

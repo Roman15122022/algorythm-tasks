@@ -1,14 +1,14 @@
 // [0, 1, false, 2, undefined, '', 3, null] => [1, 2, 3]
 
 const compact = (arr) => {
-    let answer = [];
+  let answer = [];
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i]){
-            answer.push(arr[i]);
-        }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      answer.push(arr[i]);
     }
-    return answer;
-}
+  }
+  return answer;
+};
 
-console.log(compact([0, 1, false, 2, undefined, '', 3, null]))
+console.log(compact([0, 1, false, 2, undefined, '', 3, null]));

@@ -12,14 +12,13 @@ function* gen() {
 let generator = gen();
 */
 
+function* pseudoRandom(seed) {
+  let temp = seed;
 
-function* pseudoRandom (seed) {
-   let temp = seed;
-
-    for (let i = 0; i >= 0; i++) {
-        temp = temp * 16807 % 2147483647
-        yield temp
-    }
+  for (let i = 0; i >= 0; i++) {
+    temp = (temp * 16807) % 2147483647;
+    yield temp;
+  }
 }
 
 let generator = pseudoRandom(1);

@@ -12,40 +12,39 @@ After
  */
 
 const hungryFoxes = (farmStr) => {
-    const farmArray = farmStr.split('');
-    const totalArray = [];
-    let fox = 0;
+  const farmArray = farmStr.split('');
+  const totalArray = [];
+  let fox = 0;
+  farmArray.forEach((item) => {
+    if (item === 'F') fox++;
+  });
+  if (fox) {
+    let prison = false;
     farmArray.forEach((item) => {
-        if (item === 'F') fox++;
-    })
-    if (fox) {
-        let prison = false;
-        farmArray.forEach((item) => {
-            if (item === '[') {
-                prison = true;
-                totalArray.push(item);
-            }
-            if (item === ']') {
-                prison = false;
-                totalArray.push(item);
-            }
-            if (item === 'F') {
-                totalArray.push(item);
-                if (!prison) prison = false;
-            }
+      if (item === '[') {
+        prison = true;
+        totalArray.push(item);
+      }
+      if (item === ']') {
+        prison = false;
+        totalArray.push(item);
+      }
+      if (item === 'F') {
+        totalArray.push(item);
+        if (!prison) prison = false;
+      }
 
-            if (prison && item === 'C') {
-                totalArray.push(item)
-            }
-            if (!prison && item === 'C') {
-                totalArray.push('.')
-            }
-        })
-        return totalArray.join('');
-    } else {
-        return farmStr;
-    }
-}
+      if (prison && item === 'C') {
+        totalArray.push(item);
+      }
+      if (!prison && item === 'C') {
+        totalArray.push('.');
+      }
+    });
+    return totalArray.join('');
+  } else {
+    return farmStr;
+  }
+};
 
-console.log(hungryFoxes('CCC[CCC]FCC[CCCCC]CFFFF[CCC]FFFF'))
-
+console.log(hungryFoxes('CCC[CCC]FCC[CCCCC]CFFFF[CCC]FFFF'));

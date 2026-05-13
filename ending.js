@@ -1,5 +1,4 @@
-function solution(str, ending){
-    return str.slice(str.length - ending.length, str.length) === ending;
-
+function solution(str, ending) {
+  return str.slice(str.length - ending.length, str.length) === ending;
 }
-console.log(solution('sadasda' ,'sda'))
+console.log(solution('sadasda', 'sda'));

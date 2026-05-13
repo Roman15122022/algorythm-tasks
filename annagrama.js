@@ -347,28 +347,56 @@
 //
 // }
 
+const intervals = [
+  [6, 8],
+  [1, 4],
+  [11, 12],
+  [2, 3],
+  [8, 10],
+  [5, 7],
+];
 
-const intervals = [[6, 8], [1, 4], [11, 12], [2, 3], [8, 10], [5, 7]]
+function mergeIntervals(intervals) {
+  const sortedArr = [...intervals].sort((a, b) => a[0] - b[0]);
+  const result = [];
 
-function mergeIntervals(intervals){
-    const sortedArr = [...intervals].sort((a, b) => a[0] - b[0])
-    const result = []
+  for (let i = 0; i < sortedArr.length; i++) {
+    const current = sortedArr[i];
+    const lastMergedInterval = result[result.length - 1];
 
-    for (let i = 0; i < sortedArr.length; i++) {
-        const current = sortedArr[i]
-        const lastMergedInterval = result[result.length - 1]
-
-        if (!lastMergedInterval) {
-            result.push(current)
-        } else if (lastMergedInterval[1] >= current[0]) {
-            lastMergedInterval[1] = Math.max(lastMergedInterval[1], current[1])
-        } else {
-            result.push(current)
-        }
+    if (!lastMergedInterval) {
+      result.push(current);
+    } else if (lastMergedInterval[1] >= current[0]) {
+      lastMergedInterval[1] = Math.max(lastMergedInterval[1], current[1]);
+    } else {
+      result.push(current);
     }
+  }
 
-    return result
+  return result;
 }
 
+console.log(mergeIntervals(intervals));
 
-console.log(mergeIntervals(intervals))
+function debounce(fn, delay) {
+  let timer;
+
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+
+function trortle(fn, delay) {
+  let lastTimeCalled = 0;
+
+  return (...args) => {
+    const diff = Date.now() - lastTimeCalled;
+    if (diff > delay) {
+      fn.apply(this, args);
+      lastTimeCalled = Date.now();
+    }
+  };
+}

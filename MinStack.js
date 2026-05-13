@@ -27,12 +27,11 @@ class MinStack {
   }
 }
 
-
 const minStack = new MinStack();
 minStack.push(-2);
 minStack.push(0);
 minStack.push(-3);
 console.log(minStack.getMinValue()); // -> -3
 minStack.pop();
-console.log(minStack.getMinValue());    // -> -2
+console.log(minStack.getMinValue()); // -> -2
 console.log(minStack.getMinValue()); // -> -2

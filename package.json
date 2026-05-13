@@ -1,0 +1,12 @@
+{
+  "name": "algorythm-tasks",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,ts,html,css,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,html,css,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.8.3"
+  }
+}

@@ -6,16 +6,15 @@ const employees = [
   { name: 'Eve', department: 'IT', team: 'Development' },
 ];
 
-function groupByDepartment(arr){
-  return arr.reduce((acc, {name, department, team}) => {
-    acc[department] = acc[department] || {}
-    acc[department][team] = acc[department][team] || []
+function groupByDepartment(arr) {
+  return arr.reduce((acc, { name, department, team }) => {
+    acc[department] = acc[department] || {};
+    acc[department][team] = acc[department][team] || [];
 
-    acc[department][team].push(name)
+    acc[department][team].push(name);
 
-    return acc
-  }, {})
-
+    return acc;
+  }, {});
 }
 
-console.log(groupByDepartment(employees))
+console.log(groupByDepartment(employees));

@@ -3,15 +3,14 @@
 
 function findAnagrams(arr) {
   const dictionary = arr.reduce((acc, word) => {
-    const sortedWord = word.split('').sort().join('')
+    const sortedWord = word.split('').sort().join('');
 
-    acc[sortedWord] = acc[sortedWord] ? [...acc[sortedWord], word] : [word]
+    acc[sortedWord] = acc[sortedWord] ? [...acc[sortedWord], word] : [word];
 
-    return acc
-  }, {})
+    return acc;
+  }, {});
 
-  return Object.values(dictionary)
+  return Object.values(dictionary);
 }
 
-
-console.log(findAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+console.log(findAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));

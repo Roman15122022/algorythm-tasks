@@ -1,10 +1,10 @@
 const obj = {
-    name: 'Roma',
-    hobby: 'football',
+  name: 'Roma',
+  hobby: 'football',
 
-    [Symbol.toPrimitive](hint) {
-        return hint === "string" ? `{name: "${this.name}"}` : null
-    }
-}
+  [Symbol.toPrimitive](hint) {
+    return hint === 'string' ? `{name: "${this.name}"}` : null;
+  },
+};
 
-alert(obj)
+alert(obj);

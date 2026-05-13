@@ -20,7 +20,6 @@
 // console.log(myAnnagram('str', 'tsr'), myAnnagram('21', '31'))
 //
 
-
 //
 // function firtUniqSybmol (str) {
 //    const obj = str.split('').reduce((acc, item) => {
@@ -33,20 +32,20 @@
 //     return Object.keys(obj).filter(item => obj[item] === 1)[0]
 // }
 
-function firstUnikSym (str) {
-    const count = new Map()
+function firstUnikSym(str) {
+  const count = new Map();
 
-    for (let item of str){
-        count.set(item, (count.get(item) || 0) + 1)
+  for (let item of str) {
+    count.set(item, (count.get(item) || 0) + 1);
+  }
+
+  for (let i = 0; i < str.length; i++) {
+    if (count.get(str[i]) === 1) {
+      return str[i];
     }
+  }
 
-    for (let i = 0; i < str.length; i++) {
-        if (count.get(str[i]) === 1){
-            return str[i]
-        }
-    }
-
-    return  false
+  return false;
 }
 
 // function firstUniqSymbol(str) {
@@ -80,7 +79,6 @@ function firstUnikSym (str) {
 //
 // timeout(() => console.log(1), 500)
 
-
 // function debounce (fn, delay) {
 //     let timeout
 //
@@ -106,7 +104,6 @@ function firstUnikSym (str) {
 //     }
 // }
 
-
 // function findMaxsumSubarray(arr, k){
 //     let currentSum = arr.slice(0, k).reduce((sum, num) => sum + num, 0);
 //     let maxSum = currentSum;
@@ -121,7 +118,6 @@ function firstUnikSym (str) {
 // }
 //
 // console.log(findMaxsumSubarray([1,4,2,10,23,3,1,0,20], 4))
-
 
 // function flattenArray (arr) {
 //     const result = []
@@ -138,7 +134,6 @@ function firstUnikSym (str) {
 // }
 //
 // console.log(flattenArray([1, [2, [3, 4]], 5]))
-
 
 // async function customRetry(url, count = 5){
 //     try {
@@ -158,7 +153,6 @@ function firstUnikSym (str) {
 //
 // customRetry('http://localhost', 5)
 
-
 // const add1 = x => x + 1
 // const double = x => x * 2
 // const square = x => x * x
@@ -175,8 +169,6 @@ function firstUnikSym (str) {
 //
 // const composed = compose(square, double, add1)
 // console.log(composed(2))
-
-
 
 // function currySum(...args){
 //     return (...argsSum) => {
@@ -266,7 +258,6 @@ function firstUnikSym (str) {
 // console.log(groupBy([{age:20},{age:30},{age:20}], 'age'))
 // // {20: [{age:20},{age:20}], 30: [{age:30}]}
 
-
 // const myPromiseAll = (arr) => {
 //     return new Promise((res, rej) => {
 //         if (arr.length === 0) {
@@ -320,19 +311,19 @@ function firstUnikSym (str) {
 // console.log(maxProfit([7,1,4,45,6,4]))
 
 function secondHighNumber(arr) {
-    let maxValue = -Infinity
-    let secondMax = -Infinity
+  let maxValue = -Infinity;
+  let secondMax = -Infinity;
 
-    arr.forEach((item) => {
-        if (item > maxValue){
-            secondMax = maxValue
-            maxValue = item
-        } else {
-            secondMax = Math.max(secondMax, item)
-        }
-    })
+  arr.forEach((item) => {
+    if (item > maxValue) {
+      secondMax = maxValue;
+      maxValue = item;
+    } else {
+      secondMax = Math.max(secondMax, item);
+    }
+  });
 
-    return secondMax
+  return secondMax;
 }
 
-console.log(secondHighNumber([22,11,5,1,3]))
+console.log(secondHighNumber([22, 11, 5, 1, 3]));
