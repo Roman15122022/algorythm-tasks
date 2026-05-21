@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "format": "prettier --write \"**/*.{js,ts,html,css,json,md}\"",
-    "format:check": "prettier --check \"**/*.{js,ts,html,css,json,md}\""
+    "format:check": "prettier --check \"**/*.{js,ts,html,css,json,md}\"",
+    "test": "node --test patterns/**/*.test.js"
   },
   "devDependencies": {
     "prettier": "^3.8.3"
