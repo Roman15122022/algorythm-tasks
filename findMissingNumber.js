@@ -10,4 +10,15 @@ const find = (arr) => {
   }
 };
 
-console.log(find(findMissingNumber3));
+// console.log(find(findMissingNumber3));
+
+function findMissing2(arr) {
+  const expectedLength = arr.length + 1;
+  const expectedSum = (expectedLength * (expectedLength + 1)) / 2;
+
+  return expectedSum - arr.reduce((acc, item) => (acc += item), 0);
+}
+
+console.log(findMissing2(findMissingNumber));
+console.log(findMissing2(findMissingNumber2));
+console.log(findMissing2(findMissingNumber3));

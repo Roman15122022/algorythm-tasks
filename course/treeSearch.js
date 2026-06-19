@@ -41,3 +41,16 @@ function recirsion(tree) {
 }
 
 console.log(recirsion(tree));
+
+function tryOne(tree) {
+  let sum = 0;
+
+  if (!tree.length) return sum;
+
+  for (const nod of tree) {
+    sum += nod.value;
+    sum += tryOne(nod.children);
+  }
+
+  return sum;
+}
